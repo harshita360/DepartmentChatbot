@@ -1,0 +1,78 @@
+version: "3.1"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+- story: ask about internals_exact
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: calender_event_query_init
+  - action: utter_affirm
+  - intent: calender_event_query_request_internal_exact
+  - action: action_first_action
+  
+
+- story: ask about internals
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: calender_event_query_init
+  - action: utter_affirm
+  - intent: calender_event_query_request_internal
+  - action: utter_ask_internalnumber
+  - intent: say_internal_num
+  - action: action_first_action
+
+- story: ask about internals new
+  steps:
+  - intent: calender_event_query_request_internal_exact
+  - action: action_first_action 
+
+  
+
+
+- story: ask about event date in calendar
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: calender_event_query_init
+  - action: utter_affirm
+  - intent: calender_event_query_request_date
+  - action: utter_take_bet
+  #- action: utter_calender_date_response
+
+- story: ask about event date in calendar two
+  steps:
+  - intent: calender_event_query_request_date
+  - action: utter_take_bet
+  #- action: utter_calender_date_response  
+
+- story: ask about event in calendar
+  steps:
+  - intent: calender_event_query_request_event
+  - action: utter_calender_event_response
+
+- story: ask about event in calendar
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: calender_event_query_request_event
+  - action: utter_calender_event_response
+  
+
+
+
+# - story: ask about internals
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: calender_event_query_request_internal
+#   - action: utter_calender_internal_response
+  

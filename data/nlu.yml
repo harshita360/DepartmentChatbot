@@ -1,0 +1,136 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: calender_event_query_init
+  examples: |
+    - i have a query related to calender of events 
+    - can you give me answer related to calender of events
+    - calender of events
+
+- intent: calender_event_query_request_event
+  examples: |
+    - when is the holiday for [ramzan](event_name)
+    - when is the holiday for [ramzan](event_name) this year
+    - do we have a holiday for [ramzan](event_name)
+    - when is [ramzan](event_name)
+           
+
+- intent: calender_event_query_request_date
+  examples: |
+    - is [14th April](event_date) a holiday
+    - what do we have on [14th April](event_date)
+    - what is there on [14th April](event_date)
+      
+- intent: calender_event_query_request_internal_exact
+  examples: |
+    - when do we have [2](internal_num) internals
+    - when do we have [2](internal_num) internals
+    - when do we have [second](internal_num) internals
+    - when is the [second](internal_num) internal
+    - what is the date for [2](internal_num) internal
+    - when do we have the [2nd](internal_num) internals
+
+- intent: calender_event_query_request_internal
+  examples: |
+    - when do we have internals
+    - internals is when
+    - what is the date for internals    
+
+- intent: say_internal_num
+  examples: |
+    - [2nd](internal_num)
+    - [2](internal_num)
+    - [second](internal_num)
+
+
+
